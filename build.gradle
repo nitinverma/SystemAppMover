@@ -1,3 +1,17 @@
+buildscript {
+    ext {
+        gradlePluginVersion = "1.0.0"
+    }
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:${gradlePluginVersion}"
+    }
+}
+
+
 apply plugin: 'com.android.application'
 
 android {
