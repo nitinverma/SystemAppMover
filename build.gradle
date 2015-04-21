@@ -22,6 +22,10 @@ android {
         applicationId "de.j4velin.systemappmover"
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
     signingConfigs {
         release
     }
