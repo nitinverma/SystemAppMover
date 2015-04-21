@@ -34,6 +34,9 @@ import android.widget.TextView;
 
 import com.stericson.RootTools.RootTools;
 
+import java.net.*;
+import java.util.Enumeration;
+
 /**
  * The main activity.
  * <p/>
@@ -41,6 +44,12 @@ import com.stericson.RootTools.RootTools;
  * method if root is available
  */
 public class MoverActivity extends Activity {
+
+    static {
+        final Thread.UncaughtExceptionHandler uncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
+        Thread.setDefaultUncaughtExceptionHandler(new UncaughtExHandler(uncaughtExceptionHandler));
+    }
+
 
     final static String SYSTEM_APP_FOLDER =
             android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT ?
